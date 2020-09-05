@@ -9,7 +9,17 @@ const returnNull = () => null;
 const returnNotNull = () => undefined;
 
 suite("Unit Test", function () {
+
+  // testing wit null
   test("#isNull", () => {
     assert.isNull(returnNull(), "null is null");
   });
+
+  // testing with not null
+  test('#isNotNull', () => {
+    assert.isNotNull(returnNotNull(), 'This function should not return null')
+  })
+  
 });
+
+
