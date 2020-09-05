@@ -8,7 +8,7 @@ console.clear();
 const returnNull = () => null;
 const returnNotNull = () => undefined;
 
-suite("Unit Test", function () {
+suite("Unit Tests", function () {
 
   // testing wit null
   test("#isNull", () => {
@@ -19,6 +19,14 @@ suite("Unit Test", function () {
   test('#isNotNull', () => {
     assert.isNotNull(returnNotNull(), 'This function should not return null')
   })
+
+
+  // test for undefined and defined
+  test('#isDefined, isUndefined', () => {
+    assert.isDefined(['x', 'y'], 'Array is defined')
+    assert.isUndefined(undefined, 'undefined is not defined')
+  })
+  
   
 });
 
