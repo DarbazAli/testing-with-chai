@@ -6,6 +6,7 @@ const test = mocha.test;
 console.clear();
 
 const randomInt = require('../functions/functions').randomInt;
+const sumArr = require('../functions/functions').sumArr;
 
 const returnNull = () => null;
 const returnNotNull = () => undefined;
@@ -49,6 +50,11 @@ suite("Unit Tests", function () {
     test('#randomInt, should return a random integer between min, max', () => {
       assert.approximately(randomInt(10, 20), 15, 20 )
     })
+
+    test('#sumArr should return the sum of an array', () => {
+      assert.equal(sumArr([1, 2, 3]), 6)
+    })
+    
     
   }); // end of Equality
 
