@@ -26,6 +26,16 @@ suite("Unit Tests", function () {
     assert.isDefined(['x', 'y'], 'Array is defined')
     assert.isUndefined(undefined, 'undefined is not defined')
   })
+
+
+  // test for isOk and isNotOk
+  // isOk(truthy), isNotOk(falsy)
+  test('#isOK, isNotOk', () => {
+    assert.isOk(true, 'true is truthy value and it\'s OK');
+    assert.isOk('Hello', 'String is truthy and it\'s Ok');
+    assert.isNotOk(false, 'falsy is not OK')
+  })
+  
   
   
 });
