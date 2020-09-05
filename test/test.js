@@ -5,6 +5,8 @@ const suite = mocha.suite;
 const test = mocha.test;
 console.clear();
 
+const randomInt = require('../functions/functions').randomInt;
+
 const returnNull = () => null;
 const returnNotNull = () => undefined;
 
@@ -43,5 +45,12 @@ suite("Unit Tests", function () {
       assert.equal(12, "12", "equal uses == to compare things");
       assert.notEqual(1, 2, "These two numbers are not equal");
     });
+
+    test('#randomInt, should return a random integer between min, max', () => {
+      assert.approximately(randomInt(10, 20), 15, 20 )
+    })
+    
   }); // end of Equality
+
+
 });
